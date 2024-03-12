@@ -1,10 +1,13 @@
 package com.codecaste.demo;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,6 +38,8 @@ public class CityActivity extends AppCompatActivity {
         count = stateposition;
         statename.setText(list.get(stateposition) + "");
 
+        //injujbn
+
 
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +49,7 @@ public class CityActivity extends AppCompatActivity {
                     statename.setText(list.get(count));
                 } else {
                     Toast.makeText(CityActivity.this, "Already at the first item", Toast.LENGTH_SHORT).show();
+                    Log.e("Volley", "Invalid JSON Object.");
                 }
             }
         });
